@@ -9,14 +9,7 @@ import {
 
 const titleBase = "DevConnect";
 
-const routes = {
-  home: galleryView(GAMES),
-  // create: userProfileView(),
-  // edit: userProfileView(users[0], true),
-  // login: loginView(),
-};
-
-const changeRoute = () => {
+const changeRoute = (routesIn) => {
   let hashTag = window.location.hash;
   let pageID = hashTag.replace("#", "");
 
@@ -24,7 +17,7 @@ const changeRoute = () => {
   if (pageID == "") {
     pageID = "home";
   }
-  document.getElementById("app").innerHTML = routes[pageID];
+  document.getElementById("app").innerHTML = routesIn[pageID];
   $(document).attr("title", `${titleBase} | ${pageID.toUpperCase()}`);
 };
 
@@ -33,9 +26,22 @@ const toggleMobileMenu = () => {
   $(".nav-menu").toggleClass("active");
 };
 
-function initListeners() {
+const loadData = () => {
+  //set up routes
+  const routes = {
+    home: galleryView(GAMES),
+    // create: userProfileView(),
+    // edit: userProfileView(users[0], true),
+    // login: loginView(),
+  };
+
+  //pass in routes
+  initListeners(routes);
+};
+
+function initListeners(routes) {
   $(window).on("hashchange", changeRoute);
-  changeRoute();
+  changeRoute(routes);
 
   $(".hamburger").click(function (e) {
     toggleMobileMenu();
@@ -54,5 +60,6 @@ function initListeners() {
   });
 }
 $(document).ready(function () {
-  initListeners();
+  // initListeners();
+  loadData();
 });
