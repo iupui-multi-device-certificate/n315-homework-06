@@ -1,0 +1,31 @@
+.form-element {
+  box-shadow: $shadow;
+  border: none;
+  background-color: $brand-light;
+  height: 60px;
+  padding: 20px;
+  border-radius: $border-radius;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  color: $brand-primary;
+  margin-bottom: 1rem;
+  font-size: 1.33rem;
+  font-weight: bold;
+}
+
+.form-title {
+  color: $brand-primary;
+  font-size: 2rem;
+  margin-bottom: $spacing-xl;
+  font-weight: bold;
+  text-shadow: $shadow-dark;
+  text-align: center;
+}
+
+.form-text-area {
+  height: 100px;
+}
