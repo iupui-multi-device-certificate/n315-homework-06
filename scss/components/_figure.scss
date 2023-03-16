@@ -15,11 +15,13 @@
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
-  background-image: $gradient-primary;
+  // background-image: $gradient-primary;
+  background-color: $brand-light;
   border-radius: $border-radius 0 0 0;
 }
 
 .figure-title {
+  // color: $brand-primary;
   color: $brand-primary;
   font-size: 1rem;
 }

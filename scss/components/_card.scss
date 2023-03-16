@@ -3,15 +3,27 @@
   box-shadow: $shadow-dark;
   display: flex;
   gap: 1rem;
+  padding: 0.5rem;
 
   max-width: 30rem;
+
+  background-color: $brand-light;
 }
 
 .card {
   @extend %card-shared;
-  background-color: $brand-dark;
+  // background-color: rgb($brand-primary, 0.3);
+  // background-color: $brand-light;
 
+  //this meets contrast ratio accessibility
+  // color: $brand-light;
   color: $brand-primary;
+}
+
+.card-title {
+  color: $brand-primary;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .card-vertical {
@@ -19,13 +31,25 @@
   flex-direction: column;
 }
 
-.card-body {
+%card-body-shared {
   padding: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.card-body {
+  @extend %card-body-shared;
+}
+
+.card-body-vertical {
+  @extend %card-body-shared;
+  flex-direction: column;
+}
+
+.card-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .card-text-label {
   font-weight: bold;
 }

@@ -35,8 +35,8 @@ const loadData = () => {
 
   //set up routes
   const routes = {
-    // home: galleryView(CAMPINGS),
-    home: galleryDetailView(requestedItem),
+    home: galleryView(CAMPING),
+    // home: galleryDetailView(requestedItem),
     // create: userProfileView(),
     // edit: userProfileView(users[0], true),
     // login: loginView(),

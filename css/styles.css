@@ -75,7 +75,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
-  background-image: linear-gradient(rgba(31, 81, 63, 0.3), rgba(0, 0, 0, 0.5));
+  background-color: #f4f2ed;
   border-radius: 0.375rem 0 0 0;
 }
 
@@ -89,20 +89,36 @@ body {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
   display: flex;
   gap: 1rem;
+  padding: 0.5rem;
   max-width: 30rem;
+  background-color: #f4f2ed;
 }
 
 .card {
-  background-color: #000;
   color: #1f513f;
+}
+
+.card-title {
+  color: #1f513f;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .card-vertical {
   flex-direction: column;
 }
 
-.card-body {
+.card-body-vertical, .card-body {
   padding: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.card-body-vertical {
+  flex-direction: column;
+}
+
+.card-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
