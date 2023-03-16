@@ -5,6 +5,7 @@ import {
   userProfileView,
   loginView,
   galleryView,
+  galleryDetailView,
 } from "./views/view.js";
 
 const titleBase = "DevConnect";
@@ -27,9 +28,14 @@ const toggleMobileMenu = () => {
 };
 
 const loadData = () => {
+  const getGame = (gameID) => GAMES.find((item) => gameID == item.id);
+
+  const requestedItem = getGame(1);
+
   //set up routes
   const routes = {
-    home: galleryView(GAMES),
+    // home: galleryView(GAMES),
+    home: galleryDetailView(requestedItem),
     // create: userProfileView(),
     // edit: userProfileView(users[0], true),
     // login: loginView(),
