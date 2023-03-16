@@ -1,4 +1,4 @@
-import { GAMES } from "./data/games.js";
+import { CAMPING } from "./models/model.js";
 
 import {
   homeView,
