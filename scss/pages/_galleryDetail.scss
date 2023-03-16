@@ -1,11 +1,22 @@
 .gallery-detail {
   display: flex;
   gap: 1.5rem;
+  padding: 0.5rem;
+  background-color: rgb($brand-primary, 0.3);
+  border-radius: $border-radius;
+  //TODO: fix shadow not showing
+  box-shadow: $shadow-dark;
+
+  img {
+    display: block;
+    border-radius: $border-radius;
+  }
 
   .detail-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-right: 0.5rem;
 
     .cost {
       font-size: 1.25rem;
@@ -14,10 +25,6 @@
     span {
       font-weight: 600;
     }
-  }
-
-  img {
-    display: block;
   }
 }
 

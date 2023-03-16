@@ -1,3 +1,5 @@
+//TODO: add a close button or use history API
+
 export const galleryDetailView = (campingItem) => `
   <article class="gallery-detail content" id=${campingItem.id}>
     <img src="./images/camping/full/${campingItem.fullImg}" alt="${campingItem.name}"/>
