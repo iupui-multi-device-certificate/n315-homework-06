@@ -34,7 +34,7 @@ export const CAMPING = [
     "fullImg":"cc_full.jpg",
     "summary":"Folds and unfolds quickly...",
     "detail":"Folds and unfolds quickly. Steel frame supports up to 225 lbs. Closeout.",
-    "rating": "4,4",
+    "rating": "4.4",
     "manufacturer": "Mountain Summit",
     "cost": 14.73, 
     "category": "Campsite"
