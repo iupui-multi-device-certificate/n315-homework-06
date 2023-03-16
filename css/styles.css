@@ -337,3 +337,31 @@ form {
     flex-direction: column;
   }
 }
+.gallery-detail {
+  display: flex;
+  gap: 1.5rem;
+}
+.gallery-detail .detail-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gallery-detail .detail-text .cost {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.gallery-detail .detail-text span {
+  font-weight: 600;
+}
+.gallery-detail img {
+  display: block;
+}
+
+@media only screen and (max-width: 960px) {
+  .gallery-detail {
+    flex-wrap: wrap;
+  }
+  .gallery-detail img {
+    max-width: 100%;
+  }
+}

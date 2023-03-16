@@ -1,0 +1,31 @@
+.gallery-detail {
+  display: flex;
+  gap: 1.5rem;
+
+  .detail-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .cost {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    span {
+      font-weight: 600;
+    }
+  }
+
+  img {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .gallery-detail {
+    flex-wrap: wrap;
+    img {
+      max-width: 100%;
+    }
+  }
+}
