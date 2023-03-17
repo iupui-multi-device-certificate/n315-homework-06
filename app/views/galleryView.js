@@ -7,14 +7,12 @@
   - https://kittygiraudel.com/2022/04/02/accessible-cards/
   - https://inclusive-components.design/cards/
   --> used pseudo trick
-  --> kept id on anchor in case that impacts screen readers
 */
 
 const renderCampingItem = (campingItem) => `
-    <!-- <li class="card-vertical" id="${campingItem.id}"> -->
-    <li class="card-vertical">
+    <li class="card-vertical" id="${campingItem.id}"> 
         <header>
-          <h2 class="card-title"><a class="item-link" href="#" id="${campingItem.id}">${campingItem.name}</a></h2>
+          <h2 class="card-title"><a class="item-link" href="#">${campingItem.name}</a></h2>          
         </header>     
         <div class="card-body">
           <img src="./images/camping/thumb/${campingItem.thumbImg}" alt="${campingItem.name}" />
