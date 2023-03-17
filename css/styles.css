@@ -425,10 +425,10 @@ form {
 }
 
 @media only screen and (max-width: 960px) {
-  .gallery-detail {
+  .detail-content {
     flex-wrap: wrap;
   }
-  .gallery-detail img {
+  .detail-content img {
     max-width: 100%;
   }
 }
