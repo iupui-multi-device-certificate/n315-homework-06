@@ -13,7 +13,7 @@ const renderCampingItem = (campingItem) => `
             <p class="card-text"> 
               ${campingItem.summary}
             </p>
-            <p class="card-text"><span class="card-text-label">Rating:</span> ${campingItem.rating}</p>
+            <p class="card-text"><span class="card-text-label">Rating:</span> ${campingItem.rating} / 5</p>
             <p class="card-text"><span class="card-text-label">$${campingItem.cost}</p>
           </div>
  
