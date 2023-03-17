@@ -29,7 +29,6 @@ const toggleMobileMenu = () => {
 
 //click handler to get detail of item, e.g. blog & gallery items
 const itemClickHandler = (itemID, view, items) => {
-  // let itemID = e.currentTarget.id;
   const getItem = (itemID) => items.find((item) => itemID == item.id);
   const requestedItem = getItem(itemID);
   const itemPage = view(requestedItem);
@@ -38,18 +37,9 @@ const itemClickHandler = (itemID, view, items) => {
 };
 
 const loadData = () => {
-  // const getCamping = (campingID) =>
-  //   CAMPING.find((item) => campingID == item.id);
-
-  // const requestedItem = getCamping(1);
-
   //set up routes
   const routes = {
     home: galleryView(CAMPING),
-    // home: galleryDetailView(requestedItem),
-    // create: userProfileView(),
-    // edit: userProfileView(users[0], true),
-    // login: loginView(),
   };
 
   //pass in routes
