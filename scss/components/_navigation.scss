@@ -2,17 +2,6 @@ li {
   list-style: none;
 }
 
-a {
-  color: $brand-light;
-  text-decoration-color: $brand-light;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.5rem;
-  &:hover {
-    color: $brand-dark;
-    text-decoration-color: $brand-dark;
-  }
-}
-
 .header {
   position: sticky;
   top: 0;
@@ -29,6 +18,17 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
+
+  a {
+    color: $brand-light;
+    text-decoration-color: $brand-light;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.5rem;
+    &:hover {
+      color: $brand-dark;
+      text-decoration-color: $brand-dark;
+    }
+  }
 }
 
 .hamburger {

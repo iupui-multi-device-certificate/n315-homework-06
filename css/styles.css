@@ -92,16 +92,35 @@ body {
   padding: 0.5rem;
   max-width: 30rem;
   background-color: #f4f2ed;
+  position: relative;
+  z-index: 1;
+}
+.card-vertical .card-title, .card .card-title {
+  color: #1f513f;
+  font-size: 1rem;
+  text-align: center;
+}
+.card-vertical .card-title a, .card .card-title a {
+  text-decoration-color: #f4f2ed;
+  color: #1f513f;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  z-index: 3;
+}
+.card-vertical .card-title a::after, .card .card-title a::after {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: " ";
 }
 
 .card {
   color: #1f513f;
-}
-
-.card-title {
-  color: #1f513f;
-  font-size: 1rem;
-  text-align: center;
 }
 
 .card-vertical {
@@ -233,17 +252,6 @@ li {
   list-style: none;
 }
 
-a {
-  color: #f4f2ed;
-  text-decoration-color: #f4f2ed;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.5rem;
-}
-a:hover {
-  color: #000;
-  text-decoration-color: #000;
-}
-
 .header {
   position: sticky;
   top: 0;
@@ -259,6 +267,16 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
+}
+.navbar a {
+  color: #f4f2ed;
+  text-decoration-color: #f4f2ed;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.5rem;
+}
+.navbar a:hover {
+  color: #000;
+  text-decoration-color: #000;
 }
 
 .hamburger {

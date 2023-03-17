@@ -27,11 +27,21 @@ const toggleMobileMenu = () => {
   $(".nav-menu").toggleClass("active");
 };
 
-const loadData = () => {
-  const getCamping = (campingID) =>
-    CAMPING.find((item) => campingID == item.id);
+//click handler to get detail of item, e.g. blog & gallery items
+const itemClickHandler = (itemID, view, items) => {
+  // let itemID = e.currentTarget.id;
+  const getItem = (itemID) => items.find((item) => itemID == item.id);
+  const requestedItem = getItem(itemID);
+  const itemPage = view(requestedItem);
 
-  const requestedItem = getCamping(1);
+  $("#app").html(itemPage);
+};
+
+const loadData = () => {
+  // const getCamping = (campingID) =>
+  //   CAMPING.find((item) => campingID == item.id);
+
+  // const requestedItem = getCamping(1);
 
   //set up routes
   const routes = {
@@ -59,11 +69,13 @@ function initListeners(routes) {
     toggleMobileMenu();
   });
 
-  //add listener on each button
-  let elements = document.querySelectorAll(".btn");
-
-  elements.forEach((item) => {
-    item.addEventListener("click", handleSubmit);
+  //use event delegation
+  //variation on redundant click event
+  //if time, will come back and work on making text selectable
+  $(".card-vertical").click(function (e) {
+    if (e.target.className === "item-link") {
+      itemClickHandler(e.target.id, galleryDetailView, CAMPING);
+    }
   });
 }
 $(document).ready(function () {

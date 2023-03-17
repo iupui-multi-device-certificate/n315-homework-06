@@ -1,11 +1,20 @@
-//? SEMANTIC - should these be buttons or anchor tags?
-//https://ux.iu.edu/writings/buttons-vs-links-basic/
-//https://uxmovement.com/buttons/when-to-use-a-button-or-link/
+/* 
+
+  SEMANTIC: leave anchor inside h* tag
+
+  - https://stackoverflow.com/questions/1128778
+  - how-to-mix-links-a-tag-and-headings-h1-tag-in-web-standard
+  - https://kittygiraudel.com/2022/04/02/accessible-cards/
+  - https://inclusive-components.design/cards/
+  --> used pseudo trick
+  --> kept id on anchor in case that impacts screen readers
+*/
 
 const renderCampingItem = (campingItem) => `
-    <li class="card-vertical" id=${campingItem.id}">
+    <!-- <li class="card-vertical" id="${campingItem.id}"> -->
+    <li class="card-vertical">
         <header>
-          <h2 class="card-title">${campingItem.name}</h2>
+          <h2 class="card-title"><a class="item-link" href="#" id="${campingItem.id}">${campingItem.name}</a></h2>
         </header>     
         <div class="card-body">
           <img src="./images/camping/thumb/${campingItem.thumbImg}" alt="${campingItem.name}" />
@@ -15,9 +24,7 @@ const renderCampingItem = (campingItem) => `
             </p>
             <p class="card-text"><span class="card-text-label">Rating:</span> ${campingItem.rating} / 5</p>
             <p class="card-text"><span class="card-text-label">$${campingItem.cost}</p>
-          </div>
- 
-           
+          </div>           
         </div>
     </li>
 `;

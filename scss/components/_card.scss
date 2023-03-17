@@ -8,6 +8,37 @@
   max-width: 30rem;
 
   background-color: $brand-light;
+  position: relative;
+  z-index: 1;
+
+  //skip changing border color on hover/focus for now.
+  //if time, add this in.
+  //see N315 homework 01
+  .card-title {
+    color: $brand-primary;
+    font-size: 1rem;
+    text-align: center;
+
+    a {
+      text-decoration-color: $brand-light;
+      color: $brand-primary;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      z-index: 3;
+
+      &::after {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: " ";
+      }
+    }
+  }
 }
 
 .card {
@@ -18,12 +49,6 @@
   //this meets contrast ratio accessibility
   // color: $brand-light;
   color: $brand-primary;
-}
-
-.card-title {
-  color: $brand-primary;
-  font-size: 1rem;
-  text-align: center;
 }
 
 .card-vertical {
