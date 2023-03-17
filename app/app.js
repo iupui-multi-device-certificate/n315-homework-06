@@ -21,6 +21,12 @@ const loadData = () => {
 function initListeners() {
   $(".card-vertical").click(function (e) {
     itemClickHandler(e.currentTarget.id, galleryDetailView, CAMPING);
+
+    //add listener here after item has loaded
+    $(".close-detail").click(function (e) {
+      // console.log(e.currentTarget);
+      loadData();
+    });
   });
 }
 $(document).ready(function () {

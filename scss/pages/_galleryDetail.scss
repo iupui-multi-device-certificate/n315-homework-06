@@ -2,38 +2,65 @@
   border-radius: $border-radius;
   box-shadow: $shadow-dark;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+
   padding: 0.5rem;
 
   background-color: $brand-light;
 
-  img {
-    display: block;
-    border-radius: $border-radius;
-  }
-
-  .detail-text {
+  header {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    padding-right: 0.5rem;
+    margin-bottom: 1.5rem;
 
-    .detail-title {
+    //keep it simple
+    //https://stackoverflow.com/questions/18611195/x-close-button-only-using-css
+    //andy crone solution + screen reader friendly bit
+    .close-detail {
+      background-color: transparent;
+      border: none;
+      font-size: 3rem;
+      font-weight: bold;
       color: $brand-primary;
-      font-size: 1.25rem;
+      cursor: pointer;
+      &:after {
+        display: inline-block;
+        content: "\00d7"; /* This will render the 'X' */
+      }
+    }
+  }
+  .detail-content {
+    display: flex;
+    gap: 1.5rem;
+    img {
+      display: block;
+      border-radius: $border-radius;
     }
 
-    .info {
-      font-size: 0.8rem;
-      margin-bottom: 0.75rem;
-    }
-    .cost {
-      font-size: 1.25rem;
-      font-weight: 700;
-      align-self: flex-end;
-    }
-    span {
-      font-weight: 600;
+    .detail-text {
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      padding-right: 0.5rem;
+
+      .detail-title {
+        color: $brand-primary;
+        font-size: 1.25rem;
+      }
+
+      .cost {
+        font-size: 1.25rem;
+        font-weight: 700;
+        align-self: flex-end;
+        margin-bottom: 2rem;
+      }
+      .info {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+      }
+      span {
+        font-weight: 600;
+      }
     }
   }
 }
